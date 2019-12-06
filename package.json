@@ -1,0 +1,43 @@
+{
+  "name": "www.javamark.de",
+  "version": "1.0.0",
+  "description": "My professional portfolio",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "webpack-watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgoericke/javamark.git"
+  },
+  "keywords": [
+    "portfolio",
+    "html",
+    "react"
+  ],
+  "author": "Mark Göricke <mark@javamark.de>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mgoericke/javamark/issues"
+  },
+  "homepage": "https://github.com/mgoericke/javamark#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3",
+    "react-test-renderer": "^16.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}

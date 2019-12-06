@@ -1,13 +1,17 @@
+# buildspec.yml for AWS CodePipeline
+
 version: 0.2
 
 phases:
+  pre_build:
+    commands:
+      - npm install
+      - npm run test
   install:
     runtime-versions:
       nodejs: 10
   build:
     commands:
-      - node --version
-      - npm install
       - npm run webpack
 artifacts:
   files:

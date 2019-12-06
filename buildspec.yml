@@ -8,7 +8,7 @@ phases:
     commands:
       - node --version
 artifacts:
-  - files:
+  files:
     - index.hml
     - css/*
     - font-awesome/*

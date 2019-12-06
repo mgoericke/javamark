@@ -9,7 +9,7 @@ phases:
       - node --version
 artifacts:
   files:
-    - index.hml
+    - index.html
     - css/*
     - font-awesome/*
     - fonts/*

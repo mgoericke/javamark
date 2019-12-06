@@ -12,6 +12,7 @@ artifacts:
     - index.html
     - css/*
     - font-awesome/*
+    - font-awesome/**/*
     - fonts/*
     - img/*
     - js/*

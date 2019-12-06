@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Map from './section_map';
-import Services from './section_services';
+import Map from './section-map';
+import Services from './section-services';
 import Footer from './footer';
 
 console.log('main js loaded');

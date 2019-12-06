@@ -7,10 +7,13 @@ phases:
   build:
     commands:
       - node --version
+      - npm install
+      - npm webpack
 artifacts:
   files:
     - index.html
     - css/*
+    - dist/*
     - font-awesome/*
     - font-awesome/**/*
     - fonts/*

@@ -10,8 +10,6 @@ class Services extends React.Component {
           <div className="container">
               <div className="row text-center">
                   <div className="col-lg-10 col-lg-offset-1">
-                      <h2>Services</h2>
-                      <hr className="small"/>
                       <div className="row">
                         {this.props.services.map((service, idx) => {
                           return <Service service={service} key={"service-" + idx}/>

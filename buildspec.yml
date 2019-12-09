@@ -16,6 +16,7 @@ phases:
 artifacts:
   files:
     - index.html
+    - gdpr.html
     - css/*
     - dist/*
     - font-awesome/*

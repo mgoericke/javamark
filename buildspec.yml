@@ -15,7 +15,7 @@ phases:
       - npm run webpack
 artifacts:
   files:
-    - index.html
+    - *.html
     - css/*
     - dist/*
     - font-awesome/*

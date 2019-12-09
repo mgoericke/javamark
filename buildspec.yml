@@ -1,0 +1,25 @@
+# buildspec.yml for AWS CodePipeline
+
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - npm install
+      - npm run test
+  install:
+    runtime-versions:
+      nodejs: 10
+  build:
+    commands:
+      - npm run webpack
+artifacts:
+  files:
+    - index.html
+    - css/*
+    - dist/*
+    - font-awesome/*
+    - font-awesome/**/*
+    - fonts/*
+    - img/*
+    - js/*

@@ -1,0 +1,62 @@
+service: javamark-upload
+
+custom:
+  accountId: "#{AWS::AccountId}"
+
+provider:
+  name: aws
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 's3:GetObject'
+        - 's3:HeadBucket'
+      Resource:
+        - 'arn:aws:s3:::codepipeline-eu-central-1-273271341753/*'
+    - Effect: 'Allow'
+      Action:
+        - 's3:GetObject'
+        - 's3:PutObject'
+        - 's3:GetObjectAcl'
+        - 's3:PutObjectAcl'
+        - 's3:HeadBucket'
+      Resource:
+        - 'arn:aws:s3:::javamark.markgoericke.info/*'
+    - Effect: 'Allow'
+      Action:
+        - 'sns:Publish'
+      Resource: !Ref SNSDeployTopic
+    - Effect: 'Allow'
+      Action:
+        - 'codepipeline:PutJobSuccessResult'
+        - 'codepipeline:PutJobFailureResult'
+      Resource: '*'
+
+  runtime: python2.7
+  region: eu-central-1
+  stage: dev
+  environment:
+    SNS_TOPIC_DEPLOY: !Ref SNSDeployTopic
+
+functions:
+  upload:
+    handler: handler.lambda_handler
+
+
+resources:
+  Resources:
+    SNSDeployTopic:
+      Type: AWS::SNS::Topic
+      Properties:
+        DisplayName: Javamark Deployment Notification Topic
+        TopicName: deploy-${self:service}-topic
+    SNSDeployTopicSubscription:
+      Type: AWS::SNS::Subscription
+      Properties:
+        Endpoint: info@javamark.de
+        Protocol: email
+        TopicArn: !Ref 'SNSDeployTopic'
+
+
+# to access AWS::* pseudo parameters that are not present in serverless framework
+plugins:
+  - serverless-pseudo-parameters

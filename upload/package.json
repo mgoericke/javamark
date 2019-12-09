@@ -1,0 +1,18 @@
+{
+  "name": "javamark-upload",
+  "version": "1.0.0",
+  "description": "Serverless function to upload the latest build to the javamark bucket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javamark",
+    "serverless"
+  ],
+  "author": "Mark Göricke <mark@javamark.de>",
+  "license": "ISC",
+  "dependencies": {
+    "serverless-pseudo-parameters": "^2.5.0"
+  }
+}

@@ -18,7 +18,7 @@ const myServices = [
   {
     title: 'Web Application Development',
     icon: 'file-code-o',
-    desc: 'Backend development. Java, Spring, Python, JavaScript ...',
+    desc: 'Backend development. Java, Quarkus, Spring, NodeJs, Docker, K8s ...',
     href: ''
   },
   {
